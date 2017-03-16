@@ -29,7 +29,7 @@ test('should link to contact information', function(assert) {
   visit('/');
   click('a:contains("Contact")');
   andThen(function() {
-    assert.equal(currentURL, '/contact', 'should navigate to contact page');
+    assert.equal(currentURL(), '/contact', 'should navigate to contact page');
   });
 });
 
