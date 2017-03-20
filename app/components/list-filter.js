@@ -15,5 +15,5 @@ export default Ember.Component.extend({
       let filterAction = this.get('filter');
       filterAction(filterInputValue).then((filterResults) => this.set('results', filterResults));
     }
-  } 
+  }
 });
