@@ -58,7 +58,7 @@ test('should update with matching listings', function(assert) {
     {{/list-filter}}
   `);
 
-  this.$('last-filter input').val('San').keyup();
+  this.$('.list-filter input').val('San').keyup();
 
   return wait().then(() => {
     assert.equal(this.$('.city').length, 1);
