@@ -12,10 +12,10 @@ const FILTERED_ITEMS = [{city: 'San Francisco'}];
 
 test('should initially load all listings', function(assert) {
   this.on('filterByCity', (val) => {
-    if (val === '') {
+    if (!val) {
       return RSVP.resolve(ITEMS);
     }
-
+    
     return RSVP.resolve(FILTERED_ITEMS);
   });
 
