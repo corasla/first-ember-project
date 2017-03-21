@@ -21,7 +21,7 @@ export default Ember.Service.extend({
       this.get('mapUtil').createMap(element, location);
       this.set(`cachedMaps.${camelizedLocation}`, element);
     }
-
+    element.classname = 'map';
     return element;
   },
 

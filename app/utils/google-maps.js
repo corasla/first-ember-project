@@ -9,8 +9,12 @@ export default Ember.Object.extend({
   },
 
   createMap(element, location) {
-    let map = new google.maps.Map(element, { scrollwheel: false, zoom: 10});
-    this.pinLocation(location, map);
+    let map;
+
+    setTimeout(() => {
+      map = new google.maps.Map(element, { scrollwheel: false, zoom: 9});
+      this.pinLocation(location, map);
+    });
 
     return map;
   },
@@ -21,7 +25,7 @@ export default Ember.Object.extend({
         let geometry = result[0].geometry.location;
         let position = { lat: geometry.lat(), lng: geometry.lng()};
         map.setCenter(position);
-        new google.maps.Marker({ position, map, title: location});
+        return new google.maps.Marker({ position, map, title: location});
       }
     });
   }

@@ -7,6 +7,7 @@ export default Ember.Component.extend({
     this._super(...arguments);
     let location = this.get('location');
     let mapElement = this.get('maps').getMapElement(location);
+    mapElement.style.position = 'absolute';
     this.$('.map-container').append(mapElement);
   }
 });
