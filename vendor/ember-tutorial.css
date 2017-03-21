@@ -170,6 +170,10 @@ p {
 .jumbo {
     padding: 50px;
     background: #f6f6f6;
+     margin-top: 15px;
+    padding: 15px 50px;
+    min-height: 145px;
+    position: relative;
 }
 
 .jumbo:hover {
@@ -251,16 +255,6 @@ p {
     display: inline;
 }
 
-.listing .map {
-    position: absolute;
-    bottom: 13px;
-    right: 50px;
-    height: 120px;
-    width: 120px;
-    background-size: cover;
-    border-radius: 5px;
-}
-
 .listing .detail {
     width: 36%;
     display: inline-block;
@@ -277,6 +271,16 @@ p {
 
 .show-listing .title {
     margin-bottom: 15px;
+}
+
+.map {
+    position: absolute;
+    bottom: 13px;
+    right: 50px;
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    border-radius: 5px;
 }
 
 .show-listing .detail-section {
