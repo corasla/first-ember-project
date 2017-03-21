@@ -44,9 +44,16 @@ export default function() {
       let filteredRentals = rentals.filter(function(el) {
         return el.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
       });
+      
       return { data: filteredRentals };
-    } else {
-      return { data: rentals };
     }
+     
+    return { data: rentals };
+  });
+
+  this.get('/rentals/:id', function(db, request) {
+    return {
+      data: rentals.find((rental) => request.params.id === rental.id)
+    };
   });
 }
