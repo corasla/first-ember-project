@@ -6,7 +6,7 @@ let StubMapsService = Ember.Service.extend({
   getMapElement() {
     return document.createElement('div');
   }
-})
+});
 
 moduleForAcceptance('Acceptance | list-rentals', {
   beforeEach() {
