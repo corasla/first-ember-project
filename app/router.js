@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('rentals', function() {
     this.route('show', {path: '/:rental_id'});
     this.route('show-loading');
+    this.route('show-error');
   });
   this.route('not-found', {path: '/*notfound'});
 });
