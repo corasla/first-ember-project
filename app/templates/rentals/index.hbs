@@ -7,4 +7,11 @@
       {{/each}}
   </ul>
 {{/list-filter}}
+
+{{#each someArr key=index as |item index|}}
+  <div>{{item}} - {{index}}</div>
+{{/each}}
+
+Your total is {{format-currency 350 sign="£"}}
+
 {{outlet}}

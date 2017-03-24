@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
       }
 
       return this.get('store').findAll('rental');
+    },
+    changedLocation(e) {
+      console.log('changed location', e.value);
     }
   }
 });
+

@@ -273,7 +273,7 @@ p {
     margin-bottom: 15px;
 }
 
-.map {
+.map-container .map {
     position: absolute;
     bottom: 13px;
     right: 50px;
@@ -281,6 +281,15 @@ p {
     width: 120px;
     background-size: cover;
     border-radius: 5px;
+}
+
+.big-map-container .map {
+    position: absolute;
+    background-size: cover;
+    border-radius: 5px;
+    left: 0;
+    height: 300px;
+    width: 100%;
 }
 
 .show-listing .detail-section {

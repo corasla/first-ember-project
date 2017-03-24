@@ -12,15 +12,19 @@ export default Ember.Service.extend({
     }
   },
 
-  getMapElement(location) {
-    let camelizedLocation = location.camelize();
-    let element = this.get(`cachedMaps.${camelizedLocation}`);
+  getMapElement(location, size) {
+    if (!size) {
+      size = '';
+    }
+    let key = location.camelize() + size;
+    let element = this.get(`cachedMaps.${key}`);
 
     if (!element) {
       element = this.createMapElement();
       this.get('mapUtil').createMap(element, location);
-      this.set(`cachedMaps.${camelizedLocation}`, element);
+      this.set(`cachedMaps.${key}`, element);
     }
+    
     element.classname = 'map';
     return element;
   },
