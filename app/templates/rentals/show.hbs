@@ -16,6 +16,7 @@
     <p class="description">{{model.description}}</p>
   </div>
   <img src="{{model.image}}" class="rental-pic">
+  <span>Type a location and see it rendered on the map</span>
   {{input type="text"
         value=value
         keyUp=(action 'changedLocation')}}
